@@ -20,9 +20,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../models/1")
+MODEL = tf.keras.models.load_model("../models/2")
 
-CLASS_NAMES = ['early-brownspot', 'mild-brownspot', 'severe-brownspot']
+CLASS_NAMES = ["Healthy", "Mild", "Severe"]
 
 @app.get("/ping")
 async def ping():
@@ -50,4 +50,3 @@ async def predict(
 
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
-
