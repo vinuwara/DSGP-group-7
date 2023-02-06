@@ -27,7 +27,7 @@ responses:
   utter_stress_info:
   - text: It's okay to feel overwhelmed at times. Then write some more things you gonna say to the User
   utter_exercise_info:
-  - text: Most healthy adults should aim to get about 150 mins of exercise. Add more Info
+  - text: Most healthy adults should aim to get about 150 mins of exercise. Add more Info to this accordingly
   utter_diet_info:
   - text: A healthy diet includes fruits and vegetables, whole grains and dairy
 session_config:
