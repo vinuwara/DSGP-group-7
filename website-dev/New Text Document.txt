@@ -1,0 +1,25 @@
+          <NavLink className="navbar-brand" to="/">
+          ගොවි මිතුරු
+          </NavLink>
+          <div>
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  Login / ඇතුල් වන්න
+                  <span className="sr-only">(current)</span>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/brownspot">
+                  Brownspot / දුඹුරු පුල්ලි
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/contact">
+                  Gojatawalu / ගොජරවාලු
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/blog">
+                  More Info / වැඩි විස්තර
+                </NavLink>
