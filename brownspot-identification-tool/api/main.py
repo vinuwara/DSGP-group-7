@@ -7,10 +7,9 @@ from PIL import Image
 import tensorflow as tf
 
 app = FastAPI()
-
+'''
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
+    "http://localhost", 
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -18,7 +17,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)
+)'''
 
 MODEL = tf.keras.models.load_model("../models/2")
 
@@ -32,7 +31,7 @@ def read_file_as_image(data) -> np.ndarray:
     image = np.array(Image.open(BytesIO(data)))
     return image
 
-@app.post("/predict")
+@app.post("/brownspot")
 async def predict(
     file: UploadFile = File(...)
 ):
@@ -44,9 +43,9 @@ async def predict(
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
     return {
-        'class': predicted_class,
+        'classification': predicted_class,
         'confidence': float(confidence)
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='192.168.1.61', port=8000)

@@ -10,7 +10,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost",
-    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://localhost:3002",
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -20,9 +21,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+
 MODEL1 = tf.keras.models.load_model("../brownspot-identification-tool/models/1")
 MODEL2 = tf.keras.models.load_model("../gojarawalu-identification-tool/models/1")
-CLASS_NAMES1 = ["Severe", "Mild", "Healthy"]
+CLASS_NAMES1 = ["Severe","Mild", "Healthy"]
 CLASS_NAMES2 = ["Not Gojarawalu", "Gojarawalu", "Gojarawalu"]
 
 @app.get("/ping")
@@ -45,7 +48,7 @@ async def predict(
     predicted_class = CLASS_NAMES1[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
     return {
-        'class': predicted_class,
+        'classification': predicted_class,
         'confidence': float(confidence)
     }
 
@@ -61,9 +64,8 @@ async def predict(
     predicted_class = CLASS_NAMES2[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
     return {
-        'class': predicted_class,
+        'classification': predicted_class,
         'confidence': float(confidence)
     }
-
 if __name__ == "__main__":
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='192.168.56.1', port=8000)
