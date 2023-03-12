@@ -28,7 +28,7 @@ export default function gojarawalu() {
       name: 'image.jpg'
     });
 
-    const response = await fetch('http://192.168.56.1:8000/gojarawalu', {
+    const response = await fetch('http://192.168.1.249:8000/gojarawalu', {
       method: 'POST',
       body: data,
       headers: {

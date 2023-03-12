@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -5,6 +7,8 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+from rasa.core.agent import Agent
+from rasa.utils.endpoints import EndpointConfig
 
 app = FastAPI()
 
@@ -20,8 +24,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
 
 MODEL1 = tf.keras.models.load_model("../brownspot-identification-tool/models/1")
 MODEL2 = tf.keras.models.load_model("../gojarawalu-identification-tool/models/1")
@@ -67,5 +69,7 @@ async def predict(
         'classification': predicted_class,
         'confidence': float(confidence)
     }
+
+
 if __name__ == "__main__":
-    uvicorn.run(app, host='192.168.56.1', port=8000)
+    uvicorn.run(app, host='192.168.1.249', port=8000)
