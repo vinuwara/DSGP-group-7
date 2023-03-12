@@ -1,28 +1,39 @@
-import React,{useEffect,useState} from "react";
-import { Alert,SafeAreaView,Text,View } from "react-native";
+import React from "react";
+import { View} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import App2 from "./app2";
 import HomeScreen from "./HomeScreen";
 import brownspot from "./brownspot";
 import chatbot from "./chatBot";
 import gojarawalu from "./gojarawalu";
 import styles from "./styles";
-import recomendations from "./recomendations";
+import Recomendations from "./Recomendations";
+import Mild_Brownspot from "./Mild_Brownspot";
+import Severe_Brownspot from "./Severe_Brownspot";
+import Gojarawalu_remedy from "./Gojarawalu_remedy";
+
+
 
 
 const Stack = createNativeStackNavigator();
 
 export default function App(){
+  
   return <View style={styles.container}> 
   <NavigationContainer>
     <Stack.Navigator>
+      <Stack.Screen name="App" component={App2}/>
       <Stack.Screen name="Home" component={HomeScreen}/>
       <Stack.Screen name="brownspot" component={brownspot}/>
       <Stack.Screen name="gojarawalu" component={gojarawalu}/>
       <Stack.Screen name="chatbot" component={chatbot}/>
-      <Stack.Screen name="recomendations" component={recomendations}/>
+      <Stack.Screen name="Recomendations" component={Recomendations}/>
+      <Stack.Screen name="Mild_Brownspot" component={Mild_Brownspot}/>
+      <Stack.Screen name="Severe_Brownspot" component={Severe_Brownspot}/>
+      <Stack.Screen name="Gojarawalu_remedy" component={Gojarawalu_remedy}/>
     </Stack.Navigator>
   </NavigationContainer>
+
   </View>;
- 
-}
+};

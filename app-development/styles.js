@@ -9,9 +9,6 @@ const styles = StyleSheet.create({
     
     },   
 
-    button:{
-        
-    }
 })
 
 

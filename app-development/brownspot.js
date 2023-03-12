@@ -28,7 +28,7 @@
         name: 'image.jpg'
       });
 
-      const response = await fetch('http://192.168.56.1:8000/brownspot', {
+      const response = await fetch('http://192.168.1.249:8000/brownspot', {
         method: 'POST',
         body: data,
         headers: {
