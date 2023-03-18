@@ -12,8 +12,9 @@ export default function HomeScreen(){
                <ImageBackground source={image} resizeMode="cover"></ImageBackground>
                <Button title="Brownspot Classification" onPress={()=>navigation.navigate("brownspot")}/> 
                <Button title="Gojarawalu Classification" onPress={()=>navigation.navigate("gojarawalu")}/> 
-               <Button title="ChatBot" onPress={()=>navigation.navigate("chatbot")}/> 
+               <Button title="chatbot" onPress={()=>navigation.navigate("chatbot")}/> 
                <Button title="Recomendations" onPress={()=>navigation.navigate("Recomendations")}/>
+               <Button title="Log Out" onPress={()=>navigation.navigate("Home1")}/>
           </View>
      );
  

@@ -21,7 +21,7 @@
 
       setSelectedImage(pickerResult.assets[0].uri);
 
-      const data = new FormData();
+       const data = new FormData();
       data.append('file', {
         uri: pickerResult.assets[0].uri,
         type: 'image/jpeg',
