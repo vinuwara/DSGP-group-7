@@ -7,8 +7,6 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-from rasa.core.agent import Agent
-from rasa.utils.endpoints import EndpointConfig
 
 app = FastAPI()
 
