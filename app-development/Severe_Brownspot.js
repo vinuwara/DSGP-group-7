@@ -4,6 +4,7 @@ import { View, Text, ImageBackground, StyleSheet } from "react-native";
 
 const image = { uri: 'https://reactjs.org/logo-og.png' };
 
+
 export default function Mild_Brownspot() {
 return (
 <ImageBackground

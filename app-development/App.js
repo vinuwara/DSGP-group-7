@@ -14,10 +14,6 @@ import LoginScreen from './screens/LoginScreen';
 import HomeScreen1 from './screens/HomeScreen1';
 import chatbot from "./chatBot";
 
-
-
-
-
 const Stack = createNativeStackNavigator();
 
 export default function App(){
