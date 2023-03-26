@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 
 export default function gojarawalu() {
@@ -28,7 +28,7 @@ export default function gojarawalu() {
       name: 'image.jpg'
     });
 
-    const response = await fetch('http://192.168.1.249:8000/gojarawalu', {
+    const response = await fetch('http://192.168.1.61:8000/gojarawalu', {
       method: 'POST',
       body: data,
       headers: {
@@ -36,15 +36,21 @@ export default function gojarawalu() {
       },
     });
     const result = await response.json();
-    setClassificationResult(result.classification,result.classification);
+    setClassificationResult(result.classification);
   };
 
   return (
-    <View style={styles.container}>
-      <Button title="Pick an image from camera roll" onPress={pickImage} />
-      {selectedImage && <Image source={{ uri: selectedImage }} style={styles.image} />}
-      {classificationResult && <Text>{classificationResult}</Text>}
-    </View>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <View style={styles.buttonContainer}>
+          <View style={styles.buttonWrapper}>
+            <Button title="Pick an image from camera roll" onPress={pickImage} color="black" titleStyle={{color: 'white', fontWeight: 'bold'}}/>
+          </View>
+        </View>
+        {selectedImage && <Image source={{ uri: selectedImage }} style={styles.image} />}
+        {classificationResult && <Text>{classificationResult}</Text>}
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -53,6 +59,25 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  backgroundImage: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonContainer: {
+    width: '60%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 40,
+    opacity:0.5,
+  },
+  buttonWrapper: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 10,
+    overflow: 'hidden',
   },
   image: {
     marginTop: 20,

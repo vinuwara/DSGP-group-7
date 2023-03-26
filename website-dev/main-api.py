@@ -70,4 +70,4 @@ async def predict(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='192.168.1.249', port=8000)
+    uvicorn.run(app, host='192.168.1.61', port=8000)

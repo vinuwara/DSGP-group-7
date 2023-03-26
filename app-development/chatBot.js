@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
 
-export default function chatbot() {
+export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
 
   useEffect(() => {
     // Fetch welcome message from Rasa chatbot API
-    fetch('http://192.168.1.249:5005/webhooks/rest/webhook', {
+    fetch('http://192.168.56.1:5005/webhooks/rest/webhook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export default function chatbot() {
 
   const sendMessage = () => {
     // Send user message to Rasa chatbot API
-    fetch('http://192.168.1.249:5005/webhooks/rest/webhook', {
+    fetch('http://192.168.56.1:5005/webhooks/rest/webhook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,48 +56,56 @@ export default function chatbot() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Rasa Chatbot</Text>
-      <View style={styles.messageContainer}>
-        {messages.map((message, index) => (
-          <View
-            key={index}
-            style={[
-              styles.message,
-              message.sender === 'bot' ? styles.botMessage : styles.userMessage
-            ]}
-          >
-            <Text style={styles.messageText}>{message.text}</Text>
-          </View>
-        ))}
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Rasa Chatbot</Text>
+        <View style={styles.messageContainer}>
+          {messages.map((message, index) => (
+            <View
+              key={index}
+              style={[
+                styles.message,
+                message.sender === 'bot' ? styles.botMessage : styles.userMessage
+              ]}
+            >
+              <Text style={styles.messageText}>{message.text}</Text>
+            </View>
+          ))}
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            value={inputText}
+            onChangeText={setInputText}
+            placeholder="Type your message here"
+          />
+          <Button
+            title="Send"
+            onPress={sendMessage}
+            disabled={!inputText}
+          />
+        </View>
       </View>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          value={inputText}
-          onChangeText={setInputText}
-          placeholder="Type your message here"
-        />
-        <Button
-          title="Send"
-          onPress={sendMessage}
-          disabled={!inputText}
-        />
-      </View>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center'
+  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    padding: 20
+    padding: 20,
+    backgroundColor: 'rgba(0,0,0,0.5)'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 20
+    marginBottom: 20,
+    color: 'white'
   },
   messageContainer: {
     flex: 1
