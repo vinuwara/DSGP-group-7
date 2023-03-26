@@ -7,8 +7,6 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-from rasa.core.agent import Agent
-from rasa.utils.endpoints import EndpointConfig
 
 app = FastAPI()
 
@@ -66,10 +64,10 @@ async def predict(
     predicted_class = CLASS_NAMES2[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
     return {
-        'classification': predicted_class,
+            'classification': predicted_class,
         'confidence': float(confidence)
     }
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='192.168.1.249', port=8000)
+    uvicorn.run(app, host='192.168.1.61', port=8000)
