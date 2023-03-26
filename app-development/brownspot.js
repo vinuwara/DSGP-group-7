@@ -54,6 +54,7 @@ export default function BrownSpot() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

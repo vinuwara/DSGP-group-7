@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'reac
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
-
+  
   useEffect(() => {
     // Fetch welcome message from Rasa chatbot API
     fetch('http://192.168.56.1:5005/webhooks/rest/webhook', {
