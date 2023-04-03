@@ -7,7 +7,7 @@ export default function Chatbot() {
   
   useEffect(() => {
     // Fetch welcome message from Rasa chatbot API
-    fetch('http://192.168.56.1:5005/webhooks/rest/webhook', {
+    fetch('http://192.168.1.249:5005/webhooks/rest/webhook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export default function Chatbot() {
 
   const sendMessage = () => {
     // Send user message to Rasa chatbot API
-    fetch('http://192.168.56.1:5005/webhooks/rest/webhook', {
+    fetch('http://192.168.1.249:5005/webhooks/rest/webhook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ export default function Chatbot() {
   };
 
   return (
-    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>Rasa Chatbot</Text>
         <View style={styles.messageContainer}>

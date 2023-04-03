@@ -28,7 +28,7 @@ export default function BrownSpot() {
       name: 'image.jpg'
     });
 
-    const response = await fetch('http:/192.168.1.61:8000/brownspot', {
+    const response = await fetch('http:/192.168.1.249:8000/brownspot', {
       method: 'POST',
       body: data,
       headers: {
@@ -40,7 +40,7 @@ export default function BrownSpot() {
   };
 
   return (
-    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.backgroundImage}>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.backgroundImage}>
       <View style={styles.container}>
         <View style={styles.buttonContainer}>
           <View style={styles.buttonWrapper}>
