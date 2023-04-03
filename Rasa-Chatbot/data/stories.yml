@@ -1,0 +1,135 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask paddy plant time
+  steps:
+  - intent: ask_best_paddy_plant_time
+  - action: utter_best_paddy_time
+
+- story: ask soil preparation
+  steps:
+  - intent: ask_soil_preparation
+  - action: utter_soil_preparation
+
+- story: ask best pesticides fertilizer
+  steps:
+  - intent: ask_best_pesticides_fertilizer
+  - action: utter_best_pesticides_fertilizer
+
+- story: ask water level
+  steps:
+  - intent: ask_best_water_level
+  - action: utter_best_water_level
+
+- story: ask weed control
+  steps:
+  - intent: ask_weed_control
+  - action: utter_weed_control
+
+- story: ask pests control
+  steps:
+  - intent: ask_how_pests_control
+  - action: utter_how_pests_control
+
+- story: ask paddy spacing
+  steps:
+  - intent: ask_paddy_spacing
+  - action: utter_paddy_spacing
+
+- story: ask paddy harvest
+  steps:
+  - intent: ask_paddy_harvest
+  - action: utter_paddy_harvest
+
+- story: ask best harvest method
+  steps:
+  - intent: ask_best_harvest_method
+  - action: utter_best_harvest_method
+
+- story: ask store paddy
+  steps:
+  - intent: ask_store_paddy
+  - action: utter_store_paddy
+
+- story: ask common challenges
+  steps:
+  - intent: ask_common_challenges
+  - action: utter_common_challenges
+
+- story: ask increase yield
+  steps:
+  - intent: ask_increase_yield
+  - action: utter_increase_yield
+
+- story: ask suited paddy
+  steps:
+  - intent: ask_suited_paddy
+  - action: utter_suited_paddy
+
+- story: ask prevent lodging
+  steps:
+  - intent: ask_prevent_lodging
+  - action: utter_prevent_lodging
+
+- story: ask organic conventional
+  steps:
+  - intent: ask_organic_conventional
+  - action: utter_organic_conventional
+
+- story: ask paddy sustainable
+  steps:
+  - intent: ask_paddy_sustainable
+  - action: utter_paddy_sustainable
+
+- story: ask paddy price
+  steps:
+  - intent: ask_paddy_price
+  - action: utter_paddy_price
+
+- story: ask paddy cost
+  steps:
+  - intent: ask_paddy_cost
+  - action: utter_paddy_cost
+
+- story: ask paddy schemas
+  steps:
+  - intent: ask_paddy_schemas
+  - action: utter_paddy_schemas
+
+- story: ask improving soil fertility
+  steps:
+  - intent: ask_improve_soil_fertility
+  - action: utter_improve_soil_fertility
