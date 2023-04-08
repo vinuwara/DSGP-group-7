@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, ImageBackground, ScrollView } from 'react-native';
+import { color } from 'react-native-elements/dist/helpers';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
-  
+
   useEffect(() => {
     // Fetch welcome message from Rasa chatbot API
     fetch('http://192.168.1.249:5005/webhooks/rest/webhook', {
@@ -59,7 +60,7 @@ export default function Chatbot() {
     <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>Rasa Chatbot</Text>
-        <View style={styles.messageContainer}>
+        <ScrollView style={styles.messageContainer}>
           {messages.map((message, index) => (
             <View
               key={index}
@@ -71,7 +72,7 @@ export default function Chatbot() {
               <Text style={styles.messageText}>{message.text}</Text>
             </View>
           ))}
-        </View>
+        </ScrollView>
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
@@ -108,7 +109,8 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   messageContainer: {
-    flex: 1
+    flex: 1,
+    marginBottom: 20
   },
   message: {
     maxWidth: '80%',
@@ -136,9 +138,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: 10,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'white',
     borderRadius: 5,
     padding: 10,
-    fontSize: 16
+    fontSize: 16,
+    color:'white',
   }
 });
