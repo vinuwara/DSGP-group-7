@@ -9,10 +9,10 @@
 
 1. installing dependencies 
 
- a.open cmd 
-  select location of git file 
-  go to app-development file - cd DSGP-group-7\app-development
-  type npm install ~this install the dependencies needed to run the applications~
+ a.open cmd |
+  select location of git file |
+  go to app-development file - cd DSGP-group-7\app-development |
+  type npm install ~this install the dependencies needed to run the applications~ |
 
  b.open cmd
   select location of git file 
