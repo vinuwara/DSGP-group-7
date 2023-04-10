@@ -85,42 +85,42 @@ The primary IDE used for developing the mobile application is Android Studio –
 
 1. Installing dependencies 
 
- a.Open cmd 
-   Select location of git file 
-   Go to app-development file - cd DSGP-group-7\app-development 
-   Type npm install ~this install the dependencies needed to run the applications~ 
+ a.Open cmd <br>
+   Select location of git file <br>
+   Go to app-development file - cd DSGP-group-7\app-development <br> 
+   Type npm install - this install the dependencies needed to run the applications <br> 
 
- b.Open cmd
-   Select location of git file 
-   Go to gojarawalu-identification-tool - cd DSGP-group-7\gojarawalu-identification-tool
-   Type pip install -r requirements.txt ~ this install the dependencies for the brownspot and gojarawalu api to run ~
+ b.Open cmd <br>
+   Select location of git file <br>
+   Go to gojarawalu-identification-tool - cd DSGP-group-7\gojarawalu-identification-tool <br>
+   Type pip install -r requirements.txt this install the dependencies for the brownspot and gojarawalu api to run <br>
 
- c.Open cmd 
-   Select location of git file 
-   Go to Rasa-Agriculture-Chatbot file cd DSGP-group-7\Rasa-Agriculture-Chatbot
-   Type pip rasa install ~ this install the dependencies for the rasa chatbot api ~
+ c.Open cmd <br> 
+   Select location of git file <br> 
+   Go to Rasa-Agriculture-Chatbot file cd DSGP-group-7\Rasa-Agriculture-Chatbot <br>
+   Type pip rasa install - this install the dependencies for the rasa chatbot api <br>
  
-2. Starting the app
+2. Starting the app <br>
 
-  a.Rasa chatbot api
+  a.Rasa chatbot api <br>
 
-   Open cmd 
-   Select location of git file   
-   cd DSGP-group-7\Rasa-Agriculture-Chatbot
-   rasa run -m models --enable-api --cors "*" --debug 
-   ~ keep this cmd open ~
+   Open cmd <br> 
+   Select location of git file <br>   
+   cd DSGP-group-7\Rasa-Agriculture-Chatbot <br>
+   rasa run -m models --enable-api --cors "*" --debug <br> 
+   ~ keep this cmd open ~.
 
-  b.Brownspot and gojarawalu api
+  b.Brownspot and gojarawalu api <br>
 
-    open the main-api.py file in website-dev and run the python program 
+    open the main-api.py file in website-dev and run the python program <br> 
 
-  c.Launching the mobile application on an android emulator
+  c.Launching the mobile application on an android emulator <br>
 
-   Open new cmd
-   Select location of git file
-   cd DSGP-group-7\app-development
-   npm start 
-   Press a 
-   ~ keep this cmd open ~
+   Open new cmd <br>
+   Select location of git file <br>
+   cd DSGP-group-7\app-development <br>
+   npm start <br>
+   Press a <br> 
+   ~ keep this cmd open ~.
    
   
