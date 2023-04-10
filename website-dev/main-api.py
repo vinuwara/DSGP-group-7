@@ -23,10 +23,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL1 = tf.keras.models.load_model("../brownspot-identification-tool/models/1")
-MODEL2 = tf.keras.models.load_model("../gojarawalu-identification-tool/models/1")
-CLASS_NAMES1 = ["Severe","Mild", "Healthy"]
-CLASS_NAMES2 = ["Not Gojarawalu", "Gojarawalu", "Gojarawalu"]
+MODEL1 = tf.keras.models.load_model("../brownspot-identification-tool/models/4")
+MODEL2 = tf.keras.models.load_model("../gojarawalu-identification-tool/models/2")
+CLASS_NAMES1 = ["Not Brown Spot","Mild Brown Spot", "Severe Brown Spot"]
+CLASS_NAMES2 = ["Gojarawalu", "Gojarawalu", "Not Gojarawalu"]
 
 @app.get("/ping")
 async def ping():
@@ -46,10 +46,10 @@ async def predict(
     predictions = MODEL1.predict(img_batch)
 
     predicted_class = CLASS_NAMES1[np.argmax(predictions[0])]
-    confidence = np.max(predictions[0])
+    confidence = np.max(predictions[0])*100
     return {
         'classification': predicted_class,
-        'confidence': float(confidence)
+        'confidence': int(confidence)
     }
 
 @app.post("/gojarawalu")
@@ -62,12 +62,12 @@ async def predict(
     predictions = MODEL2.predict(img_batch)
 
     predicted_class = CLASS_NAMES2[np.argmax(predictions[0])]
-    confidence = np.max(predictions[0])
+    confidence = np.max(predictions[0])*100
     return {
             'classification': predicted_class,
-        'confidence': float(confidence)
+        'confidence': int(confidence)
     }
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='192.168.1.61', port=8000)
+    uvicorn.run(app, host='192.168.1.249', port=8000)

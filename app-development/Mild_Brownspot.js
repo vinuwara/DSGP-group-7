@@ -7,7 +7,7 @@ const image = { uri: 'https://reactjs.org/logo-og.png' };
 export default function Mild_Brownspot() {
 return (
 <ImageBackground
-source={require("C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg")}
+source={require("C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg")}
 style={styles.backgroundImage}
 resizeMode="cover"
 >
@@ -16,7 +16,7 @@ resizeMode="cover"
 Disease Management
 </Text>
 <Text style={styles.text}>
-Within the crop season
+Within the crop season  
 - Application of urea in recommended dosages or application of urea based on leaf colour chart.</Text>
 <Text style={styles.topic}>
 Weed management
@@ -44,14 +44,14 @@ alignItems: "center",
 justifyContent: "center",
 },
 topic: {
-color: "white",
+color: "green",
 fontSize: 20,
 fontWeight: "bold",
 margin: 20,
 textAlign: "center",
 },
 text: {
-color: "white",
+color: "black",
 fontSize: 16,
 fontWeight: "bold",
 margin: 20,
