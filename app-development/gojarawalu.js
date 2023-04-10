@@ -55,7 +55,7 @@ export default function Gojarawalu() {
   };
 
   return (
-    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.backgroundImage}>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.backgroundImage}>
       <View style={styles.container}>
         <View style={styles.buttonContainer}>
           <View style={styles.buttonWrapper}>

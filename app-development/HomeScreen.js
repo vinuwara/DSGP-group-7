@@ -8,7 +8,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')}
+        source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')}
         style={styles.backgroundImage}
         resizeMode="cover"
       >

@@ -7,7 +7,7 @@ const image = { uri: 'https://reactjs.org/logo-og.png' };
 export default function Mild_Brownspot() {
 return (
 <ImageBackground
-source={require("C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg")}
+source={require("C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg")}
 style={styles.backgroundImage}
 resizeMode="cover"
 >
@@ -51,7 +51,7 @@ margin: 20,
 textAlign: "center",
 },
 text: {
-color: "black",
+color: "lightgrey",
 fontSize: 16,
 fontWeight: "bold",
 margin: 20,

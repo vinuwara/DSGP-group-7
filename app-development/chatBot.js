@@ -57,7 +57,7 @@ export default function Chatbot() {
   };
 
   return (
-    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>Rasa Chatbot</Text>
         <ScrollView style={styles.messageContainer}>

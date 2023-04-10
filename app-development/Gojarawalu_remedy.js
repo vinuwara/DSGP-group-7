@@ -8,7 +8,7 @@ const image = { uri: 'https://reactjs.org/logo-og.png' };
 export default function Mild_Brownspot() {
 return (
 <ImageBackground
-source={require("C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg")}
+source={require("C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg")}
 style={styles.backgroundImage}
 resizeMode="cover"
 >
@@ -17,22 +17,21 @@ resizeMode="cover"
 Disease Management
 </Text>
 <Text style={styles.text}>
-Within the crop season
-- Application of urea in recommended dosages or application of urea based on leaf colour chart.</Text>
+After developing three leaves the weedicides must be sprayed.
+The weedicides that can be used : Phenopsy prop ethyl (Vitsupper)  After 3 weeks.Metari (Metamifop)  After 10 to 14 days
+</Text>
 <Text style={styles.topic}>
-Weed management
+Field preparation methods to avoid weedicides.
 </Text>
 <Text style={styles.text}>
-If the crop is infected, following management options should be applied for the next season{'\n\n'}
-- Application of organic fertilizer will increase the soil quality{'\n\n'}
-- Use of certified seed paddy free from the disease{'\n\n'}
-- Addition of burnt paddy husk (250 kg per acre) to the soil during land preparation.{'\n\n'}
-- Abstain addition of disease infected straw.{'\n\n'}
-- Treatment of seed paddy by dipping in hot water (53-54OC) for 10-12 minutes{'\n\n'}
-- Treatment of seeds with a seed-protectant fungicide{'\n\n'}
-- Crop rotation{'\n\n'}
-- Proper land leveling
+- Tilling and leveling the field.{'\n\n'}
+- Weedicides before planting – Can use mild weedicides after preparing the field.{'\n\n'}
+- Maintaining the recommended space between paddy plants which is 20 -25 cm apart.{'\n\n'}
+- Maintaining the recommended water level in a field which is about 5cm in height.{'\n\n'}
+- Using the certified Seedlings to ensure no weedicides are included.{'\n\n'}
+- Planting competitive plants to the weedicide which are not harmful to the paddy plants.{'\n\n'}
 </Text>
+
 </View>
 </ImageBackground>
 );
@@ -45,14 +44,14 @@ alignItems: "center",
 justifyContent: "center",
 },
 topic: {
-color: "white",
+color: "green",
 fontSize: 20,
 fontWeight: "bold",
 margin: 20,
 textAlign: "center",
 },
 text: {
-color: "white",
+color: "lightgrey",
 fontSize: 16,
 fontWeight: "bold",
 margin: 20,

@@ -8,30 +8,27 @@ const image = { uri: 'https://reactjs.org/logo-og.png' };
 export default function Mild_Brownspot() {
 return (
 <ImageBackground
-source={require("C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg")}
+source={require("C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg")}
 style={styles.backgroundImage}
 resizeMode="cover"
 >
 <View style={styles.container}>
 <Text style={styles.topic}>
-Disease Management
+How to reduce Brown spot in the season which it got recognized:
 </Text>
 <Text style={styles.text}>
-Within the crop season
-- Application of urea in recommended dosages or application of urea based on leaf colour chart.</Text>
+By using a increased dose of potassium (MOP).</Text>
 <Text style={styles.topic}>
-Weed management
+How to reduce and eradicate brown spot for the next Paddy season:
 </Text>
 <Text style={styles.text}>
-If the crop is infected, following management options should be applied for the next season{'\n\n'}
-- Application of organic fertilizer will increase the soil quality{'\n\n'}
-- Use of certified seed paddy free from the disease{'\n\n'}
-- Addition of burnt paddy husk (250 kg per acre) to the soil during land preparation.{'\n\n'}
-- Abstain addition of disease infected straw.{'\n\n'}
-- Treatment of seed paddy by dipping in hot water (53-54OC) for 10-12 minutes{'\n\n'}
-- Treatment of seeds with a seed-protectant fungicide{'\n\n'}
-- Crop rotation{'\n\n'}
-- Proper land leveling
+- By using a increased dose of potassium (MOP).
+- Using partially burnt paddy husk(Kara dahayya) in the Paddy about 235kgs for an acr {'\n\n'}
+- Using green fertilizer which is a good source of organic matter and nitrogen {'\n\n'}
+- Destroying parasitic plants in the paddy field {'\n\n'}
+- By looking out for the healthy seeds that has not been infected with brown spot in the current season, we can use them for the next season to get a healthy yield {'\n\n'}
+- By Using Balanced fertilizer that has all the nutrients needed for the paddy. We need to use this balanced fertilizer according to the professional instructions {'\n\n'}
+- To reduce the acidity of the fertilizer, dolomite needs to be used {'\n\n'}
 </Text>
 </View>
 </ImageBackground>
@@ -45,14 +42,14 @@ alignItems: "center",
 justifyContent: "center",
 },
 topic: {
-color: "white",
+color: "green",
 fontSize: 20,
 fontWeight: "bold",
 margin: 20,
 textAlign: "center",
 },
 text: {
-color: "white",
+color: "lightgrey",
 fontSize: 16,
 fontWeight: "bold",
 margin: 20,

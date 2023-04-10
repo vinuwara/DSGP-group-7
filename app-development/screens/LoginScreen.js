@@ -40,7 +40,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-Repository/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
+    <ImageBackground source={require('C:/Users/Administrator/Desktop/DSGP-group-7/app-development/assets/bg.jpg')} style={styles.background}>
       <KeyboardAvoidingView
         style={styles.container}
         behavior="padding"
