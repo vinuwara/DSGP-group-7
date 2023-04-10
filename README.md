@@ -1,6 +1,7 @@
  The Research:
-   Paddy Disease & Weed Identification and Solution Recommendation Mobile Application
-   # DSGP-group-7
+ 
+ Paddy Disease & Weed Identification and Solution Recommendation Mobile Application
+ DSGP-group-7
 
 |  Name |  Student ID | RGU ID | IIT Email | 
 |---|---|---|---|
@@ -9,6 +10,7 @@
 | Dineth Hasaranga | 20210537  | 2117526  |  dineth.20210537@iit.ac.lk | 
 | Fazlan Fazeen| 20210137  | 2122091  |  fazlan.20210137@iit.ac.lk | 
 
+Introduction
 
 Paddy cultivation in Sri Lanka is given utmost significance in the agriculture industry since rice is considered as the staple food of Sri Lanka. Detection of disease and weeds in paddy has always been a challenging task and currently, farmers use traditional procedures and seek the guidance of regional agriculture officers to detect the diseases and weed and to get solutions for them.
 
@@ -40,13 +42,14 @@ Rasa Chatbot
 
 Recommendation section
 
-01. The main intention of the section is to provide the users with remedies and instructions to eradicate the weed 'Gojarawalu' and treat the plants infected with the disease 'Brown Spot'.
+The main intention of the section is to provide the users with remedies and instructions to eradicate the weed 'Gojarawalu' and treat the plants infected with the disease 'Brown Spot'.
 
 Login page
 
-01. The backend and authentication is handled the Google Firebase for the login page. Has the ability to register a new user or login as a registered user.
+The backend and authentication is handled the Google Firebase for the login page. Has the ability to register a new user or login as a registered user.
 
 Libraries Used
+
 Several libraries to implement the core functionalities of the system. The main libraries is summarized in the table below
 
 | Libraries                     | Version  |
@@ -65,6 +68,7 @@ Several libraries to implement the core functionalities of the system. The main 
 | react-native-rasa             | 0.3.0    |
 
 IDE and Frameworks
+
 The primary IDE used for developing the mobile application is Android Studio – Electric eel since it is widely considered the standard IDE for Android development and offers a user-friendly interface and Visual Studio Code (VS Code) is also utilized. To develop AI models, the preferred Integrated Development Environment (IDE) was Jupyter lab, which was installed on top of the Anaconda distribution.
 
 
@@ -79,44 +83,44 @@ The primary IDE used for developing the mobile application is Android Studio –
 |                        |PyCharm                        |2022.3.1          |
 
 
-1. installing dependencies 
+1. Installing dependencies 
 
- a.open cmd 
-  select location of git file 
-  go to app-development file - cd DSGP-group-7\app-development 
-  type npm install ~this install the dependencies needed to run the applications~ 
+ a.Open cmd 
+   Select location of git file 
+   Go to app-development file - cd DSGP-group-7\app-development 
+   Type npm install ~this install the dependencies needed to run the applications~ 
 
- b.open cmd
-  select location of git file 
-  go to gojarawalu-identification-tool - cd DSGP-group-7\gojarawalu-identification-tool
-  type pip install -r requirements.txt ~ this install the dependencies for the brownspot and gojarawalu api to run ~
+ b.Open cmd
+   Select location of git file 
+   Go to gojarawalu-identification-tool - cd DSGP-group-7\gojarawalu-identification-tool
+   Type pip install -r requirements.txt ~ this install the dependencies for the brownspot and gojarawalu api to run ~
 
- c.open cmd 
-  select location of git file 
-  go to Rasa-Agriculture-Chatbot file cd DSGP-group-7\Rasa-Agriculture-Chatbot
-  type pip rasa install ~ this install the dependencies for the rasa chatbot api ~
+ c.Open cmd 
+   Select location of git file 
+   Go to Rasa-Agriculture-Chatbot file cd DSGP-group-7\Rasa-Agriculture-Chatbot
+   Type pip rasa install ~ this install the dependencies for the rasa chatbot api ~
  
 2. Starting the app
 
-  a.rasa chatbot api
+  a.Rasa chatbot api
 
-   open cmd 
-   select location of git file   
+   Open cmd 
+   Select location of git file   
    cd DSGP-group-7\Rasa-Agriculture-Chatbot
    rasa run -m models --enable-api --cors "*" --debug 
    ~ keep this cmd open ~
 
-  b.brownspot and gojarawalu api
+  b.Brownspot and gojarawalu api
 
     open the main-api.py file in website-dev and run the python program 
 
   c.Launching the mobile application on an android emulator
 
-   open new cmd
-   select location of git file
+   Open new cmd
+   Select location of git file
    cd DSGP-group-7\app-development
    npm start 
-   press a 
+   Press a 
    ~ keep this cmd open ~
    
   
